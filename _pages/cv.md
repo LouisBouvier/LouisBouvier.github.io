@@ -9,6 +9,8 @@ redirect_from:
 
 {% include base_path %}
 
+You can get my French resume{{% staticref "files/CV - These.pdf" %}} here {{% /staticref %}}.
+
 Education
 ======
 * High school, Lycée Sacré-Coeur Angers, 2012-2015
@@ -26,4 +28,10 @@ Work experience
 
 * April 2021 - October 2021: Research intern
   * Ecole des Ponts ParisTech, CERMICS
+
+Awards
+=======
+* January 2021: Best Master Student internship report in Operations Research (ROADEF)
+See more details [here](https://www.roadef.org/roadef-prix-etudiant-master). 
+
   
