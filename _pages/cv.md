@@ -10,6 +10,8 @@ redirect_from:
 {% include base_path %}
 
 You can get my French resume [here](../files/CV_These.pdf).
+
+
 Education
 ======
 * High school, Lycée Sacré-Coeur Angers, 2012-2015
