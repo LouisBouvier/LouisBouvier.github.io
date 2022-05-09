@@ -2,9 +2,9 @@
 title: "Large Neighborhood Search and Structured Prediction for the Inventory Routing Problem"
 collection: talks
 type: "Talk"
-permalink: /talks/2022-02-24
+permalink: /talks/2022-ROADEF
 venue: "INSA Lyon, ROADEF conference"
-date: 2022-02
+date: "2022-02-23"
 location: "Lyon, France"
 ---
 
