@@ -32,7 +32,10 @@ Work experience
 
 Awards
 =======
-* January 2021: Best Master student internship report in Operations Research (ROADEF).
+* December 2021: Second prize for the Dreem ENS data challenge, team ranked 2/64 in the private leaderboard.
+See more details [here](https://challengedata.ens.fr/challenges/45). 
+
+* January 2022: Best Master student internship report in Operations Research (ROADEF).
 See more details [here](https://www.roadef.org/roadef-prix-etudiant-master). 
 
   
