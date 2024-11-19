@@ -8,12 +8,12 @@ redirect_from:
 ---
 
 Welcome to my webpage !
-I am a first year PhD student at Ecole des Ponts ParisTech [CERMICS](https://cermics-lab.enpc.fr/) under the supervision of [Axel Parmentier](https://cermics.enpc.fr/~parmenta/), in Machine Learning and Operations Research. My PhD thesis is part of an academic collaboration between Ecole des Ponts Paristech and Renault Group, and focuses on a large scale Inventory Routing Problem. 
+I am a third-year PhD student at Ecole des Ponts ParisTech [CERMICS](https://cermics-lab.enpc.fr/) under the supervision of [Axel Parmentier](https://cermics.enpc.fr/~parmenta/), in machine learning and operations research. My PhD thesis is part of an academic collaboration between Ecole des Ponts Paristech and Renault Group, and focuses on large-scale inventory routing problems.
 
 Research Topics
 ======
 
 * Combinatorial optimization
-* Stochastic optimization
+* Contextual stochastic optimization
 * Structured prediction 
 * Reinforcement learning
