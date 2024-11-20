@@ -39,7 +39,7 @@ Awards
 See more details [here](https://challengedata.ens.fr/challenges/45). 
 
 * January 2022: Best Master student internship report in Operations Research (ROADEF).
-See more details [here](https://www.roadef.org/roadef-prix-etudiant-master). 
+See more details [here](https://roadef.org/app/pages/prix-du-memoire-de-master-road). 
 
 * June 2024: Finalist of the [EURO excellence in practice award](https://www.euro-online.org/web/pages/1726/eepa-finalists-2024) for a project at Renault. 
 With Guillaume Dalle, Thaddeus Leonard and Axel Parmentier.
