@@ -7,4 +7,5 @@ date: 2022-01-09
 location: "Champs sur Marne, France"
 ---
 
-Teaching assistant (course + exercises + hackathon) in operations research for second-year engineering students
+Teaching assistant (course + exercises + hackathon) in operations research for second-year engineering students.
+
