@@ -35,6 +35,9 @@ Work experience
 
 Awards
 =======
+
+* February 2025: Best PhD in transport and logistics in France, [first prize](https://perso.isima.fr/~lacomme/GT2L/#activite10).
+
 * June 2024: Finalist of the [EURO excellence in practice award](https://www.euro-online.org/web/pages/1726/eepa-finalists-2024) for a project at Renault. 
 With Guillaume Dalle, Thaddeus Leonard and Axel Parmentier.
 
