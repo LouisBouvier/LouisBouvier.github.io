@@ -36,6 +36,8 @@ Work experience
 Awards
 =======
 
+* October 2025: AMIES PhD prize, [3rd best PhD](https://www.agence-maths-entreprises.fr/public/pages/activities/prix-de-these/prix2these-2025.html) in applied mathematics for the industry by the French agency for mathematics related to industry and society.
+
 * June 2025: Best PhD dissertation in transport and logistics in Europe (VeRoLog Doctoral Dissertation Prize), [co-recipient](https://www.linkedin.com/posts/fabien-lehu%C3%A9d%C3%A9-5a130217a_last-week-we-had-the-great-pleasure-of-attending-activity-7342891945997856768-U5xH?utm_source=share&utm_medium=member_desktop&rcm=ACoAACXz9jIBV4LsYT3fplRZG4gWpG4wfQTbOhc).
 
 * February 2025: Best PhD in transport and logistics in France, [first prize](https://perso.isima.fr/~lacomme/GT2L/#activite10).
