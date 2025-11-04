@@ -1,0 +1,275 @@
+/* ==========================================================================
+   Dark Mode Styles
+   ========================================================================== */
+
+/* Apply dark mode colors */
+[data-theme="dark"] {
+  body {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: #f0f0f0;
+  }
+
+  a {
+    color: #64b5f6;
+
+    &:visited {
+      color: #90caf9;
+    }
+
+    &:hover {
+      color: #90caf9;
+    }
+  }
+
+  .masthead {
+    background-color: #242424;
+    border-bottom: 1px solid #3a3a3a;
+
+    a {
+      color: #e0e0e0;
+
+      &:hover {
+        color: #90caf9;
+      }
+    }
+  }
+
+  .greedy-nav {
+    background: #242424;
+
+    a {
+      color: #e0e0e0;
+
+      &:hover {
+        color: #90caf9;
+      }
+    }
+
+    .visible-links a:before {
+      background: #64b5f6;
+    }
+  }
+
+  .page {
+    background-color: #1a1a1a;
+  }
+
+  .page__content {
+    background-color: #1a1a1a;
+  }
+
+  .sidebar {
+    background-color: #242424;
+    border-right: 1px solid #3a3a3a;
+
+    a {
+      color: #e0e0e0;
+
+      &:hover {
+        color: #90caf9;
+      }
+    }
+  }
+
+  .author__avatar img {
+    border: 2px solid #3a3a3a;
+  }
+
+  .author__urls-wrapper button {
+    background-color: #242424;
+    color: #e0e0e0;
+
+    &:hover {
+      background-color: #2d2d2d;
+    }
+  }
+
+  .author__urls {
+    background-color: #242424;
+    border: 1px solid #3a3a3a;
+  }
+
+  .page__footer {
+    background-color: #242424;
+    color: #e0e0e0;
+    border-top: 1px solid #3a3a3a;
+
+    a {
+      color: #e0e0e0;
+
+      &:hover {
+        color: #90caf9;
+      }
+    }
+  }
+
+  .page__footer-follow ul li a {
+    color: #e0e0e0;
+
+    &:hover {
+      color: #90caf9;
+    }
+  }
+
+  code,
+  pre {
+    background-color: #2d2d2d;
+    color: #e0e0e0;
+  }
+
+  p > code,
+  a > code,
+  li > code,
+  figcaption > code,
+  td > code {
+    background: #2d2d2d;
+    border: 1px solid #3a3a3a;
+  }
+
+  .notice,
+  .notice--primary,
+  .notice--info,
+  .notice--warning,
+  .notice--success,
+  .notice--danger {
+    background-color: #2d2d2d;
+    border-color: #3a3a3a;
+  }
+
+  .archive__item {
+    border-bottom: 1px solid #3a3a3a;
+  }
+
+  .archive__item-title a {
+    color: #f0f0f0;
+
+    &:hover {
+      color: #90caf9;
+    }
+  }
+
+  .archive__item-excerpt {
+    color: #e0e0e0;
+  }
+
+  .list__item {
+    border-bottom: 1px solid #3a3a3a;
+  }
+
+  blockquote {
+    border-left-color: #3a3a3a;
+    color: #c0c0c0;
+  }
+
+  hr {
+    border-top-color: #3a3a3a;
+  }
+
+  table {
+    border-color: #3a3a3a;
+
+    th,
+    td {
+      border-color: #3a3a3a;
+    }
+
+    th {
+      background-color: #2d2d2d;
+    }
+
+    tbody tr:nth-child(even) {
+      background-color: #2d2d2d;
+    }
+  }
+
+  .pagination {
+    border-top: 1px solid #3a3a3a;
+
+    a {
+      color: #e0e0e0;
+
+      &:hover {
+        color: #90caf9;
+      }
+    }
+  }
+
+  .taxonomy__index a {
+    border-bottom-color: #3a3a3a;
+
+    &:hover {
+      border-bottom-color: #64b5f6;
+    }
+  }
+
+  .archive__subtitle {
+    border-bottom: 1px solid #3a3a3a;
+  }
+
+  .page__taxonomy-item {
+    background-color: #2d2d2d;
+    border: 1px solid #3a3a3a;
+
+    &:hover {
+      background-color: #3a3a3a;
+    }
+  }
+
+  .btn {
+    background-color: #2d2d2d;
+    border: 1px solid #3a3a3a;
+    color: #e0e0e0;
+
+    &:hover {
+      background-color: #3a3a3a;
+      color: #f0f0f0;
+    }
+  }
+
+  input,
+  textarea,
+  select {
+    background-color: #2d2d2d;
+    border-color: #3a3a3a;
+    color: #e0e0e0;
+  }
+
+  .navicon,
+  .navicon:before,
+  .navicon:after {
+    background: #e0e0e0;
+  }
+}
+
+/* Dark mode toggle button */
+.dark-mode-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5em;
+  padding: 0.5em;
+  margin-left: 1em;
+  transition: transform 0.3s ease;
+  display: inline-block;
+  vertical-align: middle;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .dark-mode-toggle {
+    font-size: 1.2em;
+    margin-left: 0.5em;
+    padding: 0.3em;
+  }
+}
