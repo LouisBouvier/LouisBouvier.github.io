@@ -247,29 +247,37 @@
 
 /* Dark mode toggle button */
 .dark-mode-toggle {
-  background: none;
+  position: relative !important;
+  background: transparent !important;
   border: none;
   cursor: pointer;
-  font-size: 1.5em;
-  padding: 0.5em;
-  margin-left: 1em;
+  font-size: 1.3em;
+  padding: 0.5rem 0.5rem;
+  margin: 0;
   transition: transform 0.3s ease;
-  display: inline-block;
+  display: table-cell !important;
   vertical-align: middle;
+  height: auto !important;
+  right: auto !important;
 
   &:hover {
-    transform: scale(1.1);
+    transform: scale(1.15);
+    background: transparent !important;
   }
 
   &:focus {
-    outline: none;
+    outline: 2px solid transparent;
   }
+}
+
+/* Ensure the button appears in the visible links */
+.greedy-nav .visible-links .dark-mode-toggle {
+  display: table-cell !important;
 }
 
 @media (max-width: 768px) {
   .dark-mode-toggle {
     font-size: 1.2em;
-    margin-left: 0.5em;
-    padding: 0.3em;
+    padding: 0.3rem 0.5rem;
   }
 }
