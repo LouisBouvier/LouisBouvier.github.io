@@ -1,53 +1,43 @@
-// Dark Mode Toggle Functionality
-(function() {
+// Dark Mode Toggle Functionality (based on academicpages)
+(function($) {
   'use strict';
 
-  // Get the current theme from localStorage or default to light
-  function getCurrentTheme() {
-    return localStorage.getItem('theme') || 'light';
-  }
+  // Detect OS/browser preference
+  const browserPref = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
 
-  // Set the theme on the document
-  function setTheme(theme) {
-    document.documentElement.setAttribute('data-theme', theme);
-    localStorage.setItem('theme', theme);
-    updateToggleButton(theme);
-  }
+  // Set the theme on page load or when explicitly called
+  var setTheme = function(theme) {
+    const use_theme = theme || localStorage.getItem("theme") || $("html").attr("data-theme") || browserPref;
 
-  // Update the toggle button icon
-  function updateToggleButton(theme) {
-    var button = document.getElementById('dark-mode-toggle');
-    if (button) {
-      button.innerHTML = theme === 'dark' ? '☀️' : '🌙';
-      button.setAttribute('aria-label', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+    if (use_theme === "dark") {
+      $("html").attr("data-theme", "dark");
+      $("#theme-icon").removeClass("fa-sun").addClass("fa-moon");
+    } else {
+      $("html").removeAttr("data-theme");
+      $("#theme-icon").removeClass("fa-moon").addClass("fa-sun");
     }
-  }
+  };
 
-  // Toggle between light and dark themes
-  function toggleTheme() {
-    var currentTheme = getCurrentTheme();
-    var newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-    setTheme(newTheme);
-  }
+  // Toggle the theme manually
+  var toggleTheme = function() {
+    const current_theme = $("html").attr("data-theme");
+    const new_theme = current_theme === "dark" ? "light" : "dark";
+    localStorage.setItem("theme", new_theme);
+    setTheme(new_theme);
+  };
 
-  // Initialize theme on page load
-  function initTheme() {
-    var theme = getCurrentTheme();
-    setTheme(theme);
-  }
+  // Initialize on document ready
+  $(document).ready(function() {
+    // If the user hasn't chosen a theme, follow the OS preference
+    setTheme();
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener("change", function(e) {
+      if (!localStorage.getItem("theme")) {
+        setTheme(e.matches ? "dark" : "light");
+      }
+    });
 
-  // Wait for DOM to be ready
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initTheme);
-  } else {
-    initTheme();
-  }
-
-  // Add click event listener to toggle button
-  window.addEventListener('load', function() {
-    var button = document.getElementById('dark-mode-toggle');
-    if (button) {
-      button.addEventListener('click', toggleTheme);
-    }
+    // Enable the theme toggle
+    $('#theme-toggle').on('click', toggleTheme);
   });
-})();
+
+})(jQuery);

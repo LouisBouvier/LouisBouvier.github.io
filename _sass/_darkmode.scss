@@ -2,6 +2,18 @@
    Dark Mode Styles
    ========================================================================== */
 
+/* Theme toggle styling */
+#theme-toggle {
+  a {
+    width: 25px;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    margin: 0 1rem;
+    padding: 0.5rem 0;
+  }
+}
+
 /* Apply dark mode colors */
 [data-theme="dark"] {
   body {
@@ -242,42 +254,5 @@
   .navicon:before,
   .navicon:after {
     background: #e0e0e0;
-  }
-}
-
-/* Dark mode toggle button */
-.dark-mode-toggle {
-  position: relative !important;
-  background: transparent !important;
-  border: none;
-  cursor: pointer;
-  font-size: 1.3em;
-  padding: 0.5rem 0.5rem;
-  margin: 0;
-  transition: transform 0.3s ease;
-  display: table-cell !important;
-  vertical-align: middle;
-  height: auto !important;
-  right: auto !important;
-
-  &:hover {
-    transform: scale(1.15);
-    background: transparent !important;
-  }
-
-  &:focus {
-    outline: 2px solid transparent;
-  }
-}
-
-/* Ensure the button appears in the visible links */
-.greedy-nav .visible-links .dark-mode-toggle {
-  display: table-cell !important;
-}
-
-@media (max-width: 768px) {
-  .dark-mode-toggle {
-    font-size: 1.2em;
-    padding: 0.3rem 0.5rem;
   }
 }
