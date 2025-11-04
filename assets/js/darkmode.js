@@ -11,10 +11,10 @@
 
     if (use_theme === "dark") {
       $("html").attr("data-theme", "dark");
-      $("#theme-icon").text("🌙");
+      $("#theme-icon").text("●");  // filled circle for dark mode
     } else {
       $("html").removeAttr("data-theme");
-      $("#theme-icon").text("☀️");
+      $("#theme-icon").text("○");  // empty circle for light mode
     }
   };
 

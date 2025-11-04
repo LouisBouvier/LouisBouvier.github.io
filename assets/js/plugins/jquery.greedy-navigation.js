@@ -8,6 +8,7 @@
 var $nav = $('#site-nav');
 var $btn = $('#site-nav button');
 var $vlinks = $('#site-nav .visible-links');
+var $vlinks_persist_tail = $vlinks.children("*.persist.tail");
 var $hlinks = $('#site-nav .hidden-links');
 
 var breaks = [];
@@ -19,48 +20,53 @@ function updateNav() {
   // The visible list is overflowing the nav
   if($vlinks.width() > availableSpace) {
 
-    // Record the width of the list
-    breaks.push($vlinks.width());
+    while ($vlinks.width() > availableSpace && $vlinks.children("*:not(.persist)").length > 0) {
+      // Record the width of the list
+      breaks.push($vlinks.width());
 
-    // Move item to the hidden list
-    $vlinks.children().last().prependTo($hlinks);
+      // Move item to the hidden list (skip items with persist class)
+      $vlinks.children("*:not(.persist)").last().prependTo($hlinks);
 
-    // Show the dropdown btn
-    if($btn.hasClass('hidden')) {
-      $btn.removeClass('hidden');
+      availableSpace = $btn.hasClass("hidden") ? $nav.width() : $nav.width() - $btn.width() - 30;
+
+      // Show the dropdown btn
+      $btn.removeClass("hidden");
     }
 
   // The visible list is not overflowing
   } else {
 
     // There is space for another item in the nav
-    if(availableSpace > breaks[breaks.length-1]) {
+    while (breaks.length > 0 && availableSpace > breaks[breaks.length - 1]) {
 
       // Move the item to the visible list
-      $hlinks.children().first().appendTo($vlinks);
+      if ($vlinks_persist_tail.children().length > 0) {
+        $hlinks.children().first().insertBefore($vlinks_persist_tail);
+      } else {
+        $hlinks.children().first().appendTo($vlinks);
+      }
       breaks.pop();
     }
 
     // Hide the dropdown btn if hidden list is empty
     if(breaks.length < 1) {
       $btn.addClass('hidden');
+      $btn.removeClass('close');
       $hlinks.addClass('hidden');
     }
   }
 
   // Keep counter updated
   $btn.attr("count", breaks.length);
-
-  // Recur if the visible list is still overflowing the nav
-  if($vlinks.width() > availableSpace) {
-    updateNav();
-  }
-
 }
 
 // Window listeners
 
 $(window).resize(function() {
+  updateNav();
+});
+
+screen.orientation.addEventListener("change", function () {
   updateNav();
 });
 
