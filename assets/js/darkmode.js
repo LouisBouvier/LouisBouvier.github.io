@@ -11,10 +11,10 @@
 
     if (use_theme === "dark") {
       $("html").attr("data-theme", "dark");
-      $("#theme-icon").removeClass("fa-sun").addClass("fa-moon");
+      $("#theme-icon").text("🌙");
     } else {
       $("html").removeAttr("data-theme");
-      $("#theme-icon").removeClass("fa-moon").addClass("fa-sun");
+      $("#theme-icon").text("☀️");
     }
   };
 

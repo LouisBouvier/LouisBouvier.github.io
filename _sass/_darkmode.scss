@@ -5,12 +5,20 @@
 /* Theme toggle styling */
 #theme-toggle {
   a {
-    width: 25px;
+    width: auto;
     display: flex;
     justify-content: center;
+    align-items: center;
     cursor: pointer;
     margin: 0 1rem;
     padding: 0.5rem 0;
+    font-size: 1.3em;
+    line-height: 1;
+  }
+  
+  span {
+    display: inline-block;
+    user-select: none;
   }
 }
 
@@ -74,9 +82,10 @@
     background-color: #1a1a1a;
   }
 
+  /* Fix sidebar to match body background */
   .sidebar {
-    background-color: #242424;
-    border-right: 1px solid #3a3a3a;
+    background-color: #1a1a1a;
+    border-right: none;
 
     a {
       color: #e0e0e0;
@@ -87,8 +96,24 @@
     }
   }
 
-  .author__avatar img {
-    border: 2px solid #3a3a3a;
+  /* Fix author profile background */
+  .author__avatar {
+    img {
+      background-color: #1a1a1a;
+      border-color: #3a3a3a;
+    }
+  }
+
+  .author__content {
+    background-color: #1a1a1a;
+  }
+
+  .author__name {
+    color: #f0f0f0;
+  }
+
+  .author__bio {
+    color: #e0e0e0;
   }
 
   .author__urls-wrapper button {
@@ -103,6 +128,10 @@
   .author__urls {
     background-color: #242424;
     border: 1px solid #3a3a3a;
+
+    &:after {
+      border-color: #242424 transparent;
+    }
   }
 
   .page__footer {
